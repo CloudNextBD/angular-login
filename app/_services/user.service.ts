@@ -20,7 +20,8 @@ export class UserService {
         let options = new RequestOptions({ headers: headers });
 
         // get users from api
-        return this.http.get('/api/users', options)
+        return this.http.get('http://localhost:8080/loginauth', options)
             .map((response: Response) => response.json());
+
     }
 }

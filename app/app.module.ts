@@ -31,12 +31,12 @@ import { HomeComponent } from './home/index';
     providers: [
         AuthGuard,
         AuthenticationService,
-        UserService,
+        UserService
 
         // providers used to create fake backend
-        fakeBackendProvider,
-        MockBackend,
-        BaseRequestOptions
+        // fakeBackendProvider,
+        // MockBackend,
+        // BaseRequestOptions
     ],
     bootstrap: [AppComponent]
 })

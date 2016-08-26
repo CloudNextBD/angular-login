@@ -7,13 +7,13 @@ export let fakeBackendProvider = {
     useFactory: (backend, options) => {
         // configure fake backend
         backend.connections.subscribe((connection: MockConnection) => {
-            let testUser = { username: 'test', password: 'test', firstName: 'Test', lastName: 'User' };
+            let testUser = { username: 'mrahman', password: 'abc123', firstName: 'Test', lastName: 'User' };
 
             // wrap in timeout to simulate server api call
             setTimeout(() => {
 
                 // fake authenticate api end point
-                if (connection.request.url.endsWith('/api/authenticate') && connection.request.method === RequestMethod.Post) {
+                if (connection.request.url.endsWith('/loginauth') && connection.request.method === RequestMethod.Post) {
                     // get parameters from post request
                     let params = JSON.parse(connection.request.getBody());
 

@@ -1,4 +1,5 @@
 ﻿import { Component } from '@angular/core';
+import {LoginComponent} from "./login/login.component";
 
 @Component({
     moduleId: module.id,
@@ -6,4 +7,4 @@
     templateUrl: 'app.component.html'
 })
 
-export class AppComponent { }
+export class AppComponent {}
